@@ -46,6 +46,10 @@ params:
     Text: "Suggest Changes"
     appendFilePath: true
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 outputs:
   home:
     - HTML
