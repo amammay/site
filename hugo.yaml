@@ -1,0 +1,53 @@
+baseURL: https://mammay.dev/
+languageCode: en-us
+title: Alex Mammay
+theme: [ "PaperMod" ]
+
+enableEmoji: true
+enableRobotsTXT: true
+enableInlineShortcodes: true
+
+menu:
+  main:
+    - identifier: archives
+      name: Archives
+      url: archives
+    #      weight 10
+    - identifier: tags
+      name: Tags
+      url: tags
+    - name: Search
+      url: search/
+
+params:
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  defaultTheme: auto
+  ShareButtons: [ "twitter", "facebook", "linkedin", "reddit", "ycombinator" ]
+
+  homeInfoParams:
+    Title: "Hi there :wave:"
+    Content: Coming Soon
+
+  socialIcons:
+    - name: github
+      url: https://github.com/amammay
+    - name: linkedin
+      url: https://www.linkedin.com/in/alex-mammay-7a969ba6/
+
+  editPost:
+    URL: "https://github.com/amammay/site/tree/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
