@@ -1,5 +1,5 @@
 ---
-date: '2026-03-15T16:48:37-04:00'
+date: '2026-03-15T06:00:00-04:00'
 draft: false
 title: 'Running Buf Plugins Locally'
 ---
