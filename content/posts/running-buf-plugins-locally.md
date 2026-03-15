@@ -4,12 +4,13 @@ draft: false
 title: 'Running Buf Plugins Locally'
 ---
 
-Buf plugins are designed to be run in the cloud, but you can also run them locally. This is useful for testing and
-development, and it can also be used to run plugins that are not yet available in the Buf Schema Registry or are
-self-hosted.
+Buf plugins are designed to run in the cloud, but you can also run them locally. This is useful for testing,
+development, and running plugins that are self-hosted or not yet available in the Buf Schema Registry.
 
-To get started, clone the [bufbuild/plugins](https://github.com/bufbuild/plugins) repository.
-Then, run the following command to build the Go plugins for Protocol Buffers and gRPC:
+In this example, we will use the Go plugins for Protocol Buffers and gRPC.
+
+To get started, clone the [bufbuild/plugins](https://github.com/bufbuild/plugins) repository. Then, run the following
+command to build the Go plugins for Protocol Buffers and gRPC:
 
 ```shell
 make PLUGINS="protocolbuffers/go grpc/go" build
@@ -43,3 +44,6 @@ plugins:
 +    opt:
 +      - paths=source_relative
 ```
+
+The important thing to note here is the attaching of stdin, stdout, and stderr to the Docker container. This allows Buf
+to communicate with the plugin via standard input and output. The `-i` flag keeps stdin open when running the container.
